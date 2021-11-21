@@ -26,24 +26,11 @@ GPIO.setup(enB,GPIO.OUT)
 GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.LOW)
 
-/##
-#GPIO.setmode(GPIO.BCM)
-#GPIO.setup(in1,GPIO.OUT)
-#GPIO.setup(in2,GPIO.OUT)
-#GPIO.setup(en,GPIO.OUT)
-#GPIO.output(in1,GPIO.LOW)
-#GPIO.output(in2,GPIO.LOW)
-#/
-
 p=GPIO.PWM(enA,1000)
-p=GPIO.PWM(enB,1000)
-
-#p = GPIO.PWM(enA, 5000)
-#p2 = GPIO.PWM(enB, 5000)
-#p.start(25)
-#p2.start(25)
+p2=GPIO.PWM(enB,1000)##defines second motor
 
 p.start(25)
+p2.start(25)##defines second motor
 print("\n")
 print("The default speed & direction of motor is LOW & Forward.....")
 print("r-run s-stop f-forward b-backward l-low m-medium h-high e-exit")
