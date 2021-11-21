@@ -25,8 +25,23 @@ GPIO.setup(enB,GPIO.OUT)
 
 GPIO.output(in3,GPIO.LOW)
 GPIO.output(in4,GPIO.LOW)
+
+/##
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setup(in1,GPIO.OUT)
+#GPIO.setup(in2,GPIO.OUT)
+#GPIO.setup(en,GPIO.OUT)
+#GPIO.output(in1,GPIO.LOW)
+#GPIO.output(in2,GPIO.LOW)
+#/
+
 p=GPIO.PWM(enA,1000)
 p=GPIO.PWM(enB,1000)
+
+#p = GPIO.PWM(enA, 5000)
+#p2 = GPIO.PWM(enB, 5000)
+#p.start(25)
+#p2.start(25)
 
 p.start(25)
 print("\n")
