@@ -12,7 +12,7 @@ def moisture(sensor):
         print("water")
 
 
-GPIO.add_event_detect(sensor, GPIO.BOTH, bouncetime=500)
+GPIO.add_event_detect(sensor, GPIO.BOTH, bouncetime=400)
 GPIO.add_event_callback(sensor, moisture)
 
 
