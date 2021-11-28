@@ -6,5 +6,5 @@ To-Do list(Code)
 4. Make servo code for fish feeder
 5. Get fan for cooling
 
-video for temp.py
+video for temp2.py
 https://www.youtube.com/watch?v=X48OoO8r2Vo
