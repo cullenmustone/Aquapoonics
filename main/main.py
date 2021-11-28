@@ -27,7 +27,6 @@ def moisture(sensor):#takes sesnor as input variable
          gpio.output(23, True) 
          gpio.output(24, False)
          time.sleep(20000)
-
     else:
         print("water")#else if the sensor is on print water
 
