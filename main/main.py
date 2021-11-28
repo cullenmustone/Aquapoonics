@@ -4,7 +4,6 @@ import time
 import os
 import glob
 
-
 ##sets up the pinout for the GPIO pins for the motor driver
 def init():
  gpio.setmode(gpio.BCM)
@@ -17,14 +16,13 @@ sensor=21#pinout for the date pin
 GPIO.setmode(GPIO.BCM)#set mode
 GPIO.setup(sensor, GPIO.IN)#sets as input
 
-
 def moisture(sensor):#takes sesnor as input variable
     if GPIO.input(sensor):#if the sensor is off print no water
         print("no water")
         def forward():
          gpio.output(17, True)
          gpio.output(22, False)
-         gpio.output(23, True) 
+         gpio.output(23, True)
          gpio.output(24, False)
          time.sleep(20000)
     else:
@@ -35,8 +33,5 @@ GPIO.add_event_detect(sensor, GPIO.BOTH, bouncetime=100)
 GPIO.add_event_callback(sensor, moisture)
 
 ##Main loop
-While True:
+while True:
  time.sleep(1)
-    
-
-
