@@ -37,7 +37,7 @@ GPIO.add_event_callback(sensor, moisture)
 
 ##Main loop
 While True:
-  time.sleep(1)
+ time.sleep(1)
     
 
 
