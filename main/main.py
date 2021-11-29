@@ -29,6 +29,5 @@ while True:
          gpio.cleanup()
     else:
         print("water")
-
-gpio.add_event_detect(sensor, gpio.BOTH, bouncetime=100)
-gpio.add_event_callback(sensor, moisture)
+    gpio.add_event_detect(sensor, gpio.BOTH, bouncetime=100)
+    gpio.add_event_callback(sensor, moisture)
