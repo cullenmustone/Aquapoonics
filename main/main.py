@@ -10,7 +10,15 @@ def init():
  gpio.setup(22, gpio.OUT)
  gpio.setup(23, gpio.OUT)
  gpio.setup(24, gpio.OUT)
-
+ 
+def forward(sec):
+ init()
+ gpio.output(17, True)
+ gpio.output(22, False)
+ gpio.output(23, True)
+ gpio.output(24, False)
+ time.sleep(sec)
+ 
 sensor=21
 gpio.setmode(gpio.BCM)
 gpio.setup(sensor, gpio.IN)
@@ -18,13 +26,6 @@ gpio.setup(sensor, gpio.IN)
 def moisture(sensor):
     if gpio.input(sensor):
         print("no water")
-        def forward(sec):
-         init()
-         gpio.output(17, True)
-         gpio.output(22, False)
-         gpio.output(23, True)
-         gpio.output(24, False)
-         time.sleep(sec)
          forward(10)
          gpio.cleanup()
     else:
