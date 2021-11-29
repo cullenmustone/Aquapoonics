@@ -18,12 +18,15 @@ gpio.setup(sensor, gpio.IN)
 def moisture(sensor):
     if gpio.input(sensor):
         print("no water")
-        def forward():
+        def forward(sec):
+         init()
          gpio.output(17, True)
          gpio.output(22, False)
          gpio.output(23, True)
          gpio.output(24, False)
-         time.sleep(20000)
+         time.sleep(sec)
+         forward(10)
+         gpio.cleanup()
     else:
         print("water")
 
@@ -33,6 +36,7 @@ gpio.add_event_callback(sensor, moisture)
 
 while True:
   time.sleep(1)
+
 
 
 
