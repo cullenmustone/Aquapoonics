@@ -63,9 +63,9 @@ while True:
         time.sleep(1)
 
     reverse (10)
-
-    print(' ROM: '+ rom)
-
-
+    
+    c, f = read_temp()
+    print('C={:,.3f} F={:,.3f}'.format(c, f))
+    time.sleep(1)
 
 
