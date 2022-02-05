@@ -4,8 +4,7 @@ To-Do list(Code)
     every x hours run soil moisture detection. If no water detected --> turn on pumps for x sec
     turn servo fish feeder every x hours for x sec
     every x min run temp 
-2. mount aerator, filter, fish feeder
-3. time/way for data collection
+2. time/way for data collection
 
 
 Next year:
